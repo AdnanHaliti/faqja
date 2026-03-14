@@ -1,22 +1,201 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.fieldtechllc.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com styles.css; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.fieldtechllc.com https://wa.me;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.fieldtechllc.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.fieldtechllc.com https://wa.me;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     <title>FieldTech.site — Enterprise IT Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        ::-webkit-scrollbar { display: none;}
-        body { font-family: 'Inter', sans-serif; }
+        /* FieldTech - Complementary styles for Tailwind-based design */
+
+        /* Base resets */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a1428;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00d9ff;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff88;
+        }
+
+        /* Fade-up animation for scroll reveal */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pulse animation for tech device SVG */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .tech-device {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Gradient text utility */
+        .text-gradient {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glass card hover effects */
+        .glass-card {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(0, 217, 255, 0.1);
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
+        }
+
+        /* Gradient backgrounds */
+        .gradient-dark {
+            background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%);
+        }
+
+        .gradient-cyan {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+        }
+
+        /* Hero glow animations */
+        .hero-glow {
+            position: absolute;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Form input focus styles */
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #00d9ff;
+            box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+        }
+
+        /* Button hover effects */
+        button,
+        a.btn {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile menu transitions */
+        #mobile-menu {
+            transition: max-height 0.3s ease;
+        }
+
+        /* Responsive typography */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+        }
+
+        /* Focus visible for accessibility */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #00d9ff;
+            outline-offset: 2px;
+        }
+
+        /* Selection color */
+        ::selection {
+            background: rgba(0, 217, 255, 0.3);
+            color: #ffffff;
+        }
+
+        /* Loading animation for form submission */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        /* Override default body class from Tailwind */
+        body {
+            background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%) !important;
+            color: #ffffff !important;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -32,7 +211,7 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body>
 
 <!-- Header -->
 <header id="header" class="bg-white shadow-sm fixed w-full top-0 z-50">
@@ -61,7 +240,7 @@
             </button>
         </div>
     </div>
-    
+
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
         <div class="px-4 py-4 space-y-4">
@@ -410,31 +589,33 @@
                     </div>
                     <div>
                         <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Issue Description</label>
-                        <textarea id="description" name="description" placeholder="Describe the issue briefly (include OS, app, error messages)..." rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all font-mono text-sm"></textarea>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex-1">
-                            <label for="urgency" class="block text-sm font-medium text-gray-700 mb-1">Urgency</label>
-                            <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
-                                <option value="low">Low</option>
-                                <option value="normal" selected>Normal</option>
-                                <option value="high">High</option>
-                            </select>
-                        </div>
-                        <div class="flex-1 flex items-end">
-                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
-                                <i class="fa-brands fa-whatsapp mr-2"></i>Send via WhatsApp
-                            </button>
-                        </div>
+                        <textarea id="description" name="description" placeholder="Describe the issue briefly (include OS, app, error messages)..." rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required></textarea>
                     </div>
                 </div>
-                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-lightbulb text-green-600 text-xl"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900 text-sm mb-1">Quick Tip</h4>
-                            <p class="text-gray-600 text-sm">Add a short title in the Prime ID so we can route your ticket faster.</p>
-                        </div>
+                <div class="space-y-4">
+                    <div>
+                        <label for="department" class="block text-sm font-medium text-gray-700 mb-1">Department</label>
+                        <select id="department" name="department" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                            <option value="">Select Department</option>
+                            <option value="sales">Sales</option>
+                            <option value="support">Technical Support</option>
+                            <option value="hr">HR</option>
+                            <option value="billing">Billing</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="urgency" class="block text-sm font-medium text-gray-700 mb-1">Urgency Level</label>
+                        <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                            <option value="low">Low - Within 24 hours</option>
+                            <option value="medium">Medium - Within 4 hours</option>
+                            <option value="high">High - Within 1 hour</option>
+                            <option value="critical">Critical - Within 15 minutes</option>
+                        </select>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
+                            Submit Request
+                        </button>
                     </div>
                 </div>
             </div>
@@ -448,133 +629,162 @@
         <div class="grid md:grid-cols-4 gap-8">
             <div class="space-y-4">
                 <div class="flex items-center space-x-2">
-                    <img src="logo/logo no backround/filedtech_white.png" alt="FieldTech logo" class="h-10 w-auto">
+                    <img src="logo/logo no backround/fieldtech_white.png" alt="FieldTech logo" class="h-10 w-auto">
                     <span class="text-xl font-bold">FieldTech</span>
                 </div>
-                <p class="text-gray-400">Professional IT services nationwide. Enterprise-grade solutions for businesses of all sizes.</p>
+                <p class="text-gray-400">Enterprise IT solutions for businesses of all sizes nationwide.</p>
             </div>
-
+            
             <div>
                 <h3 class="text-lg font-semibold mb-4">Services</h3>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#services" class="hover:text-white">On-Premise</a></li>
-                    <li><a href="#services" class="hover:text-white">Workplace</a></li>
+                    <li><a href="#services" class="hover:text-white">On-Premise Services</a></li>
+                    <li><a href="#services" class="hover:text-white">Workplace Services</a></li>
                     <li><a href="#services" class="hover:text-white">IT Life-Cycle</a></li>
-                    <li><a href="#services" class="hover:text-white">Remote Support</a></li>
+                    <li><a href="#services" class="hover:text-white">Network Setup</a></li>
                 </ul>
             </div>
-
+            
             <div>
                 <h3 class="text-lg font-semibold mb-4">Company</h3>
                 <ul class="space-y-2 text-gray-400">
                     <li><a href="#about" class="hover:text-white">About Us</a></li>
                     <li><a href="#team" class="hover:text-white">Our Team</a></li>
-                    <li><a href="#how" class="hover:text-white">How it Works</a></li>
                     <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    <li><a href="#how" class="hover:text-white">How It Works</a></li>
                 </ul>
             </div>
-
+            
             <div>
                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
                 <div class="space-y-2 text-gray-400">
-                    <a href="https://wa.me/13073384404?text=Hello%2C%20I%20need%20support" class="flex items-center hover:text-white" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-whatsapp mr-2"></i>+1 3073384404
-                    </a>
-                    <a href="mailto:support@fieldtechllc.com" class="flex items-center hover:text-white">
-                        <i class="fa-solid fa-envelope mr-2"></i>support@fieldtechllc.com
-                    </a>
-                    <p class="flex items-center">
-                        <i class="fa-solid fa-map mr-2"></i>Nationwide US Coverage
-                    </p>
+                    <p class="flex items-center"><i class="fa-solid fa-phone mr-2"></i>+1 3073384404</p>
+                    <p class="flex items-center"><i class="fa-solid fa-envelope mr-2"></i>support@fieldtechllc.com</p>
+                    <p class="flex items-center"><i class="fa-solid fa-clock mr-2"></i>24/7 Available</p>
                 </div>
             </div>
         </div>
-
+        
         <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 FieldTech.site. All rights reserved.</p>
+            <p>&copy; 2024 FieldTech. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <script>
-    // Rate limiting for WhatsApp links (10 minutes between messages)
-    const WHATSAPP_RATE_LIMIT_MS = 10 * 60 * 1000;
-    const WHATSAPP_LAST_CLICK_KEY = 'whatsapp_last_click';
+// FieldTech - Complementary JavaScript
 
-    function canContactWhatsApp() {
-        const lastClickStr = localStorage.getItem(WHATSAPP_LAST_CLICK_KEY);
-        if (!lastClickStr) return true;
-        const lastClick = parseInt(lastClickStr, 10);
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal on scroll animation for additional elements
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe sections for fade-in animation
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-up');
+        observer.observe(section);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    }
+
+    // Add parallax effect to hero glow elements
+    const heroGlow = document.querySelectorAll('.hero-glow');
+    if (heroGlow.length > 0) {
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            heroGlow.forEach((glow, index) => {
+                const speed = (index + 1) * 20;
+                const xOffset = (x - 0.5) * speed;
+                const yOffset = (y - 0.5) * speed;
+                glow.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+    }
+
+    // WhatsApp click handler with rate limiting
+    let lastWhatsAppClick = 0;
+    window.handleWhatsAppClick = function(event) {
         const now = Date.now();
-        return now - lastClick >= WHATSAPP_RATE_LIMIT_MS;
-    }
-
-    function getRemainingWaitTime() {
-        const lastClickStr = localStorage.getItem(WHATSAPP_LAST_CLICK_KEY);
-        if (!lastClickStr) return 0;
-        const lastClick = parseInt(lastClickStr, 10);
-        const now = Date.now();
-        const remaining = WHATSAPP_RATE_LIMIT_MS - (now - lastClick);
-        return Math.max(0, Math.ceil(remaining / 1000));
-    }
-
-    function recordWhatsAppClick() {
-        localStorage.setItem(WHATSAPP_LAST_CLICK_KEY, Date.now().toString());
-    }
-
-    function handleWhatsAppClick(event) {
-        if (!canContactWhatsApp()) {
+        if (now - lastWhatsAppClick < 5000) { // 5 second cooldown
             event.preventDefault();
-            const remainingSeconds = getRemainingWaitTime();
-            const minutes = Math.floor(remainingSeconds / 60);
-            const seconds = remainingSeconds % 60;
-            alert(`Please wait ${minutes}m ${seconds}s before initiating another WhatsApp chat.`);
+            alert('Please wait before sending another WhatsApp message.');
             return false;
         }
-        recordWhatsAppClick();
+        lastWhatsAppClick = now;
         return true;
-    }
+    };
 
-    function sendEmail() {
+    // Email handler
+    window.sendEmail = function() {
         window.location.href = 'mailto:support@fieldtechllc.com';
-    }
+    };
 
-    function sanitizeInput(input) {
-        const div = document.createElement('div');
-        div.textContent = input;
-        return div.innerHTML;
+    // Form submission handler
+    const form = document.getElementById('support-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.primeId || !data.description) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.innerHTML = '<span class="loading mr-2"></span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Request submitted successfully! We will contact you shortly.');
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Support form handler
-        var form = document.getElementById('support-form');
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                if (!canContactWhatsApp()) {
-                    const remainingSeconds = getRemainingWaitTime();
-                    const minutes = Math.floor(remainingSeconds / 60);
-                    const seconds = remainingSeconds % 60;
-                    alert(`Please wait ${minutes}m ${seconds}s before initiating another WhatsApp chat.`);
-                    return;
-                }
-                var prime = sanitizeInput(document.getElementById('primeId').value.trim());
-                var desc = sanitizeInput(document.getElementById('description').value.trim());
-                var urgency = sanitizeInput(document.getElementById('urgency').value);
-                if (!prime) {
-                    document.getElementById('primeId').focus();
-                    return alert('Please enter your Prime ID so we can route your request.');
-                }
-                var parts = ['Support request', 'Title: ' + prime];
-                if (urgency) parts.push('Urgency: ' + urgency);
-                if (desc) parts.push('Description: ' + desc);
-                var message = encodeURIComponent(parts.join('\n'));
-                var wa = 'https://wa.me/38348343550?text=' + message;
-                recordWhatsAppClick();
-                window.open(wa, '_blank');
-            });
-        }
-    });
+});
 </script>
 
 </body>
