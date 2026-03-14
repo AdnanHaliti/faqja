@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.fieldtechllc.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.fieldtechllc.com https://wa.me;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <title>FieldTech.site — Enterprise IT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+<!-- Header -->
+<header id="header" class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <a href="#home" class="flex items-center space-x-2" aria-label="FieldTech home">
+                <img src="logo/logo no backround/fieldtech_black.png" alt="FieldTech logo" class="h-10 w-auto">
+                <span class="text-xl font-bold text-gray-900">FieldTech</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                <a href="#team" class="text-gray-700 hover:text-primary font-medium">Team</a>
+                <a href="#how" class="text-gray-700 hover:text-primary font-medium">How it Works</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex flex-col items-end text-sm">
+                <a href="https://wa.me/13073384404?text=Hello%2C%20I%20need%20support" class="text-primary font-bold hover:text-secondary" target="_blank" rel="noopener">+1 3073384404</a>
+                <span class="text-gray-500">Nationwide US Coverage</span>
+            </div>
+
+            <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars text-gray-700"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-4 py-4 space-y-4">
+            <a href="#services" class="block text-gray-700 hover:text-primary font-medium">Services</a>
+            <a href="#about" class="block text-gray-700 hover:text-primary font-medium">About</a>
+            <a href="#team" class="block text-gray-700 hover:text-primary font-medium">Team</a>
+            <a href="#how" class="block text-gray-700 hover:text-primary font-medium">How it Works</a>
+            <a href="#contact" class="block text-primary font-semibold">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 h-[600px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center h-full">
+            <div class="space-y-6">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    Enterprise IT <span class="text-primary">Solutions</span> for Your Business
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Comprehensive on-premise, workplace, and IT life-cycle services for businesses of all sizes. Available for remote troubleshooting and on-site support across the entire United States.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/38348343550?text=Hello%2C%20I%20need%20support" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition-colors font-semibold text-center" target="_blank" rel="noopener" onclick="return handleWhatsAppClick(event)">
+                        Request Service
+                    </a>
+                    <button type="button" class="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold" onclick="sendEmail()">
+                        Contact via Email
+                    </button>
+                </div>
+                <div class="flex items-center space-x-6 pt-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-clock text-yellow-500"></i>
+                        <span class="font-semibold">24/7</span>
+                        <span class="text-gray-600">Support</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-map text-primary"></i>
+                        <span class="font-semibold">Nationwide</span>
+                        <span class="text-gray-600">Coverage</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="w-full h-80 overflow-hidden rounded-2xl shadow-2xl">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b8f567cde0-d93d3da07858f726f597.png" alt="professional IT technician working on network equipment in modern office environment" />
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-check text-green-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Certified Experts</div>
+                            <div class="text-sm text-gray-600">24/7 Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Complete IT Solutions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive IT solutions across all business needs, delivered by experienced professionals.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-server text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">On-Premise Services</h3>
+                <p class="text-gray-600 mb-4">Enterprise-grade on-premise IT services across the United States tailored to your business needs.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Government & Specialized IT</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Cloud & Mobility Solutions</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Infrastructure Management</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-building text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Workplace Services</h3>
+                <p class="text-gray-600 mb-4">Professional workplace IT support and management services for modern businesses.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Help Desk Support Services</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>FieldTech Service Management</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Software Development</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-repeat text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">IT Life-Cycle Services</h3>
+                <p class="text-gray-600 mb-4">Complete IT life-cycle management from planning to maintenance and upgrades.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Enterprise Services</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Retail Services</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Facilities Maintenance</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-network-wired text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Network Setup & Config</h3>
+                <p class="text-gray-600 mb-4">Complete network installation, configuration, and optimization for businesses of all sizes.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Router & Switch Setup</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>WiFi Configuration</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Security Implementation</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-headset text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Remote Support</h3>
+                <p class="text-gray-600 mb-4">Round-the-clock technical support and emergency response services.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Emergency Response</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Remote Support</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Preventive Maintenance</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-desktop text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">On-Site Assistance</h3>
+                <p class="text-gray-600 mb-4">Skilled technicians come to your location for hands-on support.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Hardware Installation</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>On-Site Troubleshooting</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Equipment Repair</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">24/7</div>
+                <div class="text-blue-200">Remote Support</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">100%</div>
+                <div class="text-blue-200">Certified Techs</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">US</div>
+                <div class="text-blue-200">Nationwide</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">Fast</div>
+                <div class="text-blue-200">Response Time</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About / Why Choose Us Section -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose FieldTech</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Expert technicians, fast response times, and flexible support plans.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="w-full h-80 bg-gray-200 rounded-xl overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/78f601e39c-44ed28b29cd6652832a8.png" alt="USA map with network connections and IT service coverage points across all 50 states" />
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-clock text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">24/7 Remote Support</h3>
+                        <p class="text-gray-600">We're available whenever you need help with quick remote fixes and diagnostics.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-truck text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">On-Site Assistance</h3>
+                        <p class="text-gray-600">Skilled technicians come to your location for hands-on support and complex issues.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-certificate text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Certified Professionals</h3>
+                        <p class="text-gray-600">Experienced and certified IT professionals ready to handle all your IT needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="how" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Simple four-step process to get your IT issues resolved.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact Us</h3>
+                <p class="text-gray-600">Call, email, or submit a request with a short description and screenshots — we'll respond promptly and begin diagnosis.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Remote Troubleshooting</h3>
+                <p class="text-gray-600">We diagnose and resolve remotely where possible.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Escalation</h3>
+                <p class="text-gray-600">Tier 2 escalation and deeper diagnostics for complex issues.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl font-bold text-white">4</span>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">On-site Resolution</h3>
+                <p class="text-gray-600">We dispatch a technician when needed to resolve issues in person.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Departments Section -->
+<section id="team" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Contact Our Departments</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Reach out to the right team for your needs.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-users text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">HR Team</h3>
+                <p class="text-gray-600 mb-4">Human Resources & Careers</p>
+                <a href="mailto:hr@fieldtechllc.com" class="text-primary font-medium hover:text-secondary">hr@fieldtechllc.com</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-briefcase text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Sales Team</h3>
+                <p class="text-gray-600 mb-4">Sales & Business Inquiries</p>
+                <a href="mailto:sales@fieldtechllc.com" class="text-primary font-medium hover:text-secondary">sales@fieldtechllc.com</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-headset text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Support Team</h3>
+                <p class="text-gray-600 mb-4">24/7 Technical Support</p>
+                <a href="mailto:support@fieldtechllc.com" class="text-primary font-medium hover:text-secondary">support@fieldtechllc.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="cta" class="py-20 bg-gradient-to-r from-primary to-secondary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Get Expert IT Support?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8">
+            Contact us by WhatsApp or email. We're here to help with all your IT needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="https://wa.me/38348343550?text=Hello%2C%20I%20need%20support" class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" target="_blank" rel="noopener" onclick="return handleWhatsAppClick(event)">
+                Message via WhatsApp
+            </a>
+            <button type="button" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold" onclick="sendEmail()">
+                Send Email
+            </button>
+        </div>
+
+        <!-- Support Form -->
+        <form id="support-form" class="bg-white rounded-xl p-8 max-w-3xl mx-auto text-left" aria-label="Request Support">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 space-y-4">
+                    <div>
+                        <label for="primeId" class="block text-sm font-medium text-gray-700 mb-1">Ticket Title or Prime ID</label>
+                        <input id="primeId" name="primeId" type="text" placeholder="e.g. PR-12345" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required>
+                    </div>
+                    <div>
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Issue Description</label>
+                        <textarea id="description" name="description" placeholder="Describe the issue briefly (include OS, app, error messages)..." rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all font-mono text-sm"></textarea>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-1">
+                            <label for="urgency" class="block text-sm font-medium text-gray-700 mb-1">Urgency</label>
+                            <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                                <option value="low">Low</option>
+                                <option value="normal" selected>Normal</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="flex-1 flex items-end">
+                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
+                                <i class="fa-brands fa-whatsapp mr-2"></i>Send via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-lightbulb text-green-600 text-xl"></i>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 text-sm mb-1">Quick Tip</h4>
+                            <p class="text-gray-600 text-sm">Add a short title in the Prime ID so we can route your ticket faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <img src="logo/logo no backround/filedtech_white.png" alt="FieldTech logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold">FieldTech</span>
+                </div>
+                <p class="text-gray-400">Professional IT services nationwide. Enterprise-grade solutions for businesses of all sizes.</p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Services</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#services" class="hover:text-white">On-Premise</a></li>
+                    <li><a href="#services" class="hover:text-white">Workplace</a></li>
+                    <li><a href="#services" class="hover:text-white">IT Life-Cycle</a></li>
+                    <li><a href="#services" class="hover:text-white">Remote Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Company</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#about" class="hover:text-white">About Us</a></li>
+                    <li><a href="#team" class="hover:text-white">Our Team</a></li>
+                    <li><a href="#how" class="hover:text-white">How it Works</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                <div class="space-y-2 text-gray-400">
+                    <a href="https://wa.me/13073384404?text=Hello%2C%20I%20need%20support" class="flex items-center hover:text-white" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp mr-2"></i>+1 3073384404
+                    </a>
+                    <a href="mailto:support@fieldtechllc.com" class="flex items-center hover:text-white">
+                        <i class="fa-solid fa-envelope mr-2"></i>support@fieldtechllc.com
+                    </a>
+                    <p class="flex items-center">
+                        <i class="fa-solid fa-map mr-2"></i>Nationwide US Coverage
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2026 FieldTech.site. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Rate limiting for WhatsApp links (10 minutes between messages)
+    const WHATSAPP_RATE_LIMIT_MS = 10 * 60 * 1000;
+    const WHATSAPP_LAST_CLICK_KEY = 'whatsapp_last_click';
+
+    function canContactWhatsApp() {
+        const lastClickStr = localStorage.getItem(WHATSAPP_LAST_CLICK_KEY);
+        if (!lastClickStr) return true;
+        const lastClick = parseInt(lastClickStr, 10);
+        const now = Date.now();
+        return now - lastClick >= WHATSAPP_RATE_LIMIT_MS;
+    }
+
+    function getRemainingWaitTime() {
+        const lastClickStr = localStorage.getItem(WHATSAPP_LAST_CLICK_KEY);
+        if (!lastClickStr) return 0;
+        const lastClick = parseInt(lastClickStr, 10);
+        const now = Date.now();
+        const remaining = WHATSAPP_RATE_LIMIT_MS - (now - lastClick);
+        return Math.max(0, Math.ceil(remaining / 1000));
+    }
+
+    function recordWhatsAppClick() {
+        localStorage.setItem(WHATSAPP_LAST_CLICK_KEY, Date.now().toString());
+    }
+
+    function handleWhatsAppClick(event) {
+        if (!canContactWhatsApp()) {
+            event.preventDefault();
+            const remainingSeconds = getRemainingWaitTime();
+            const minutes = Math.floor(remainingSeconds / 60);
+            const seconds = remainingSeconds % 60;
+            alert(`Please wait ${minutes}m ${seconds}s before initiating another WhatsApp chat.`);
+            return false;
+        }
+        recordWhatsAppClick();
+        return true;
+    }
+
+    function sendEmail() {
+        window.location.href = 'mailto:support@fieldtechllc.com';
+    }
+
+    function sanitizeInput(input) {
+        const div = document.createElement('div');
+        div.textContent = input;
+        return div.innerHTML;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Support form handler
+        var form = document.getElementById('support-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (!canContactWhatsApp()) {
+                    const remainingSeconds = getRemainingWaitTime();
+                    const minutes = Math.floor(remainingSeconds / 60);
+                    const seconds = remainingSeconds % 60;
+                    alert(`Please wait ${minutes}m ${seconds}s before initiating another WhatsApp chat.`);
+                    return;
+                }
+                var prime = sanitizeInput(document.getElementById('primeId').value.trim());
+                var desc = sanitizeInput(document.getElementById('description').value.trim());
+                var urgency = sanitizeInput(document.getElementById('urgency').value);
+                if (!prime) {
+                    document.getElementById('primeId').focus();
+                    return alert('Please enter your Prime ID so we can route your request.');
+                }
+                var parts = ['Support request', 'Title: ' + prime];
+                if (urgency) parts.push('Urgency: ' + urgency);
+                if (desc) parts.push('Description: ' + desc);
+                var message = encodeURIComponent(parts.join('\n'));
+                var wa = 'https://wa.me/38348343550?text=' + message;
+                recordWhatsAppClick();
+                window.open(wa, '_blank');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

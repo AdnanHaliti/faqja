@@ -1,0 +1,22 @@
+# Dockerfile for Python backend server
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copy application files
+COPY server.py .
+COPY index.html .
+COPY script.js .
+COPY styles.css .
+
+# Copy assets directory if it exists (optional)
+
+# Install any dependencies if needed (currently none required)
+# RUN pip install --no-cache-dir <package-name>
+
+# Expose port
+EXPOSE 8000
+
+# Run server
+CMD ["python", "server.py"]

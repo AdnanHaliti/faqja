@@ -1,0 +1,178 @@
+/* FieldTech - Complementary styles for Tailwind-based design */
+
+/* Base resets */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a1428;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00d9ff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
+}
+
+/* Fade-up animation for scroll reveal */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pulse animation for tech device SVG */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.tech-device {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Gradient text utility */
+.text-gradient {
+    background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glass card hover effects */
+.glass-card {
+    background: rgba(0, 217, 255, 0.05);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(0, 217, 255, 0.1);
+    border-color: #00d9ff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
+}
+
+/* Gradient backgrounds */
+.gradient-dark {
+    background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%);
+}
+
+.gradient-cyan {
+    background: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+}
+
+/* Hero glow animations */
+.hero-glow {
+    position: absolute;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Form input focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #00d9ff;
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+}
+
+/* Button hover effects */
+button,
+a.btn {
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu transitions */
+#mobile-menu {
+    transition: max-height 0.3s ease;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Focus visible for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #00d9ff;
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(0, 217, 255, 0.3);
+    color: #ffffff;
+}
+
+/* Loading animation for form submission */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}

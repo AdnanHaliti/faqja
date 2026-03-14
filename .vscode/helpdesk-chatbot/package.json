@@ -1,0 +1,27 @@
+{
+  "name": "helpdesk-chatbot",
+  "version": "1.0.0",
+  "description": "A chatbot for IT helpdesk support using OpenAI.",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [
+    "chatbot",
+    "helpdesk",
+    "openai",
+    "it-support"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
