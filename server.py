@@ -188,7 +188,7 @@ class RestrictedHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header('X-XSS-Protection', '1; mode=block')
         self.send_header('Referrer-Policy', 'strict-origin-when-cross-origin')
         self.send_header('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
-        self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;")
+        self.send_header('Content-Security-Policy', "default-src 'self' https://www.fieldtechllc.com https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.tailwindcss.com https://wa.me; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.fieldtechllc.com https://wa.me;")
         super().end_headers()
     
     def log_message(self, format, *args):
