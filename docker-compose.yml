@@ -4,12 +4,11 @@ services:
   web:
     build: .
     container_name: fieldtech-website
-    ports:
-      - "8000:8000"
+    networks:
+      - nginx_network  # Connect to the same network as your nginx proxy
     restart: unless-stopped
 
-# Optional: Uncomment and configure the external network if you have nginx proxy manager running
-# networks:
-#   nginx_network:
-#     external: true
-#     name: nginxproxymanager_default  # Name of your nginx proxy manager network
+networks:
+  nginx_network:
+    external: true
+    name: nginxproxymanager_default  # Name of your nginx proxy manager network

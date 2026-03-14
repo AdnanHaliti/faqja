@@ -7,8 +7,9 @@ WORKDIR /app
 COPY server.py .
 COPY index-new.html index.html
 
-# Copy all files and directories
-COPY . .
+# Copy assets and logo directories
+COPY assets ./assets
+COPY logo ./logo
 
 # Set proper ownership for the copied directories
 RUN chown -R root:root assets/ 2>/dev/null || true
