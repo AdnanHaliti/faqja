@@ -7,9 +7,12 @@ WORKDIR /app
 COPY server.py .
 COPY index-new.html index.html
 
-# Copy assets and logo directories if they exist
-COPY --chown=root:root assets ./assets 2>/dev/null || true
-COPY --chown=root:root logo ./logo 2>/dev/null || true
+# Copy all files and directories
+COPY . .
+
+# Set proper ownership for the copied directories
+RUN chown -R root:root assets/ 2>/dev/null || true
+RUN chown -R root:root logo/ 2>/dev/null || true
 
 # Expose port 8000
 EXPOSE 8000

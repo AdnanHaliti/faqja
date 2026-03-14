@@ -1,0 +1,33 @@
+# Production Docker Compose configuration for FieldTech website
+# 
+# NOTE: This configuration assumes you have nginx-proxy-manager running
+# with a network named 'nginxproxymanager_default'.
+# 
+# If you don't have nginx-proxy-manager set up, use the basic configuration
+# which exposes port 8000 directly.
+
+version: '3.8'  # Note: This line is obsolete in newer Docker Compose versions
+
+services:
+  web:
+    build: .
+    container_name: fieldtech-website
+    # If using nginx proxy manager:
+    networks:
+      - nginx_network
+    restart: unless-stopped
+    
+    # Alternative: If running standalone without proxy
+    # ports:
+    #   - "8000:8000"
+
+networks:
+  nginx_network:
+    external: true
+    name: nginxproxymanager_default  # Name of your nginx proxy manager network
+
+# To use this configuration with nginx proxy manager:
+# 1. Ensure nginx proxy manager is running
+# 2. Make sure the network 'nginxproxymanager_default' exists
+# 3. Comment out the 'ports' section above and uncomment the 'networks' section
+# 4. Configure a proxy host in nginx proxy manager pointing to 'fieldtech-website:8000'
