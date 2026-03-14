@@ -1,0 +1,345 @@
+Lines changed: 350 additions & 0 deletions
+Original file line number	Original file line	Diff line number	Diff line change
+@@ -0,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header id="header" class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-network-wired text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-900">TechConnect Pro</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                <a href="#coverage" class="text-gray-700 hover:text-primary font-medium">Coverage</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">Get Quote</button>
+            </nav>
+            
+            <button class="md:hidden p-2">
+                <i class="fa-solid fa-bars text-gray-700"></i>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- Hero Section -->
+<section id="hero" class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 h-[600px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center h-full">
+            <div class="space-y-6">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    Expert IT Support <span class="text-primary">Nationwide</span> via FieldNation
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Connect with 1000+ certified IT technicians across the US. From network setup to emergency support, we deliver professional IT services wherever you need them.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
+                        Request Service
+                    </button>
+                    <button class="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                        View Coverage Map
+                    </button>
+                </div>
+                <div class="flex items-center space-x-6 pt-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-star text-yellow-400"></i>
+                        <span class="font-semibold">4.9/5</span>
+                        <span class="text-gray-600">Rating</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-users text-primary"></i>
+                        <span class="font-semibold">1000+</span>
+                        <span class="text-gray-600">Technicians</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="w-full h-80 overflow-hidden rounded-2xl shadow-2xl">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b8f567cde0-d93d3da07858f726f597.png" alt="professional IT technician working on network equipment in modern office environment" />
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-check text-green-600 text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">24/7 Available</div>
+                            <div class="text-sm text-gray-600">Emergency Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Complete IT Solutions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our certified technicians provide comprehensive IT services through the FieldNation platform, ensuring quality and reliability.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-network-wired text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Network Setup & Config</h3>
+                <p class="text-gray-600 mb-4">Complete network installation, configuration, and optimization for businesses of all sizes.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Router & Switch Setup</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>WiFi Configuration</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Security Implementation</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-desktop text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Hardware Support</h3>
+                <p class="text-gray-600 mb-4">Professional hardware installation, repair, and maintenance services.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Server Installation</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>PC/Laptop Repair</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Component Upgrades</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Cybersecurity</h3>
+                <p class="text-gray-600 mb-4">Comprehensive security solutions to protect your business data and systems.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Security Audits</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Firewall Setup</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Data Protection</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-cloud text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Cloud Services</h3>
+                <p class="text-gray-600 mb-4">Cloud migration, setup, and management for modern businesses.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Cloud Migration</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Backup Solutions</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>System Integration</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-headset text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+                <p class="text-gray-600 mb-4">Round-the-clock technical support and emergency response services.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Emergency Response</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Remote Support</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Preventive Maintenance</li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-cogs text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">System Integration</h3>
+                <p class="text-gray-600 mb-4">Seamless integration of new systems with existing infrastructure.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Software Integration</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Database Setup</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>API Configuration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Stats Section -->
+<section id="stats" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">1000+</div>
+                <div class="text-blue-200">Certified Technicians</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">50</div>
+                <div class="text-blue-200">States Covered</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">24/7</div>
+                <div class="text-blue-200">Support Available</div>
+            </div>
+            <div class="text-white">
+                <div class="text-4xl lg:text-5xl font-bold mb-2">98%</div>
+                <div class="text-blue-200">Success Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Coverage Section -->
+<section id="coverage" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nationwide Coverage</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our network of certified technicians spans across all 50 states, ensuring fast response times and local expertise.
+            </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="w-full h-80 bg-gray-200 rounded-xl overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/78f601e39c-44ed28b29cd6652832a8.png" alt="USA map with network connections and IT service coverage points" />
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-clock text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Fast Response Times</h3>
+                        <p class="text-gray-600">Average 2-hour response time for emergency calls, 24-hour for standard requests.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-certificate text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Certified Professionals</h3>
+                        <p class="text-gray-600">All technicians are background-checked and certified in their respective specialties.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-tools text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Fully Equipped</h3>
+                        <p class="text-gray-600">Technicians come with professional tools and equipment for immediate problem resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA Section -->
+<section id="cta" class="py-20 bg-gradient-to-r from-primary to-secondary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Get Expert IT Support?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8">
+            Connect with certified technicians in your area through FieldNation. Fast, reliable, and professional IT services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Request Service Now
+            </button>
+            <button class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold">
+                Call (555) 123-4567
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer id="footer" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-network-wired text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold">TechConnect Pro</span>
+                </div>
+                <p class="text-gray-400">Professional IT services nationwide through FieldNation platform.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Services</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Network Setup</a></li>
+                    <li><a href="#" class="hover:text-white">Hardware Support</a></li>
+                    <li><a href="#" class="hover:text-white">Cybersecurity</a></li>
+                    <li><a href="#" class="hover:text-white">Cloud Services</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Company</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                    <li><a href="#" class="hover:text-white">Support</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                <div class="space-y-2 text-gray-400">
+                    <p class="flex items-center"><i class="fa-solid fa-phone mr-2"></i>(555) 123-4567</p>
+                    <p class="flex items-center"><i class="fa-solid fa-envelope mr-2"></i>support@techconnectpro.com</p>
+                    <p class="flex items-center"><i class="fa-solid fa-clock mr-2"></i>24/7 Available</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 TechConnect Pro. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

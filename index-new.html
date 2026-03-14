@@ -190,7 +190,7 @@
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
-        
+
         /* Override default body class from Tailwind */
         body {
             background: linear-gradient(135deg, #0a1428 0%, #1a2f5a 100%) !important;
@@ -218,7 +218,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             <a href="#home" class="flex items-center space-x-2" aria-label="FieldTech home">
-                <img src="logo/logo no backround/fieldtech_black.png" alt="FieldTech logo" class="h-10 w-auto">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-network-wired text-white text-lg"></i>
+                </div>
                 <span class="text-xl font-bold text-gray-900">FieldTech</span>
             </a>
 
@@ -308,7 +310,7 @@
 
 <!-- Services Section -->
 <section id="services" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Complete IT Solutions</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -629,7 +631,9 @@
         <div class="grid md:grid-cols-4 gap-8">
             <div class="space-y-4">
                 <div class="flex items-center space-x-2">
-                    <img src="logo/logo no backround/fieldtech_white.png" alt="FieldTech logo" class="h-10 w-auto">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-network-wired text-white text-lg"></i>
+                    </div>
                     <span class="text-xl font-bold">FieldTech</span>
                 </div>
                 <p class="text-gray-400">Enterprise IT solutions for businesses of all sizes nationwide.</p>
